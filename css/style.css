@@ -1,0 +1,555 @@
+/*-- Body Reset --*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+body {
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  color: #616971;
+}
+
+
+/*============= NAVIGATION =============*/
+.navbar-brand img{
+  height: 5.5rem;
+}
+footer .container img{
+  height: 5rem;
+}
+.navbar{
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, .1);
+  z-index: 1;
+}
+.container{
+  position: sticky;
+}
+.nav-item{
+  padding: 0.5rem;
+}
+.nav-link{
+  color: #5b5555!important;
+}
+.nav-link.active,
+.nav-link:hover{
+  color: #49819b!important;
+}
+
+
+/*============= CAROUSEL =============*/
+#carousel{
+  box-shadow: 0.1rem 1rem rgba(0, 0, 0, .1);
+}
+.carousel-inner{
+  max-height: 38rem!important;
+}
+
+
+/*---Change Carousel Transition Speed --*/
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active{
+  transition: transform 1.2s ease;
+}
+
+/*-- Carousel Content --*/
+.carousel-caption{
+  position: absolute;
+  top: 54%;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+}
+.bg-custom{
+  background-color: rgba(0, 0, 0, .4);
+  color: white;
+  border-radius: 1rem;
+}
+.carousel-caption h1{
+  font-size: 3.8rem;
+  text-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 1);
+}
+.carousel-caption h3{
+  font-size: 2.2rem;
+  text-shadow: .1rem .1rem .2rem rgba(0, 0, 0, 1);
+}
+.border-primary{
+  border-top: .2rem solid #4981b3!important;
+}
+.btn-lg{
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border-width: medium;
+}
+.btn-danger{
+  background-color: #ac2615;
+  border: .05rem solid #ac2615;
+}
+.btn-primary{
+  background-color: #4981b3;
+  border: .05rem solid #4981b3;
+}
+.btn-primary:hover,
+.btn-primary:focus{
+  background-color: #68a0d2!important;
+  border: .05rem solid #68a0d2!important;
+}
+
+
+/*===== FIXED BACKGROUND IMG =====*/
+
+.fixed-background {
+  overflow: hidden; /*-- Correction for iOS --*/
+}
+.fixed{
+  background-image: url('../images/matrix.jpg');
+  position: fixed;
+}
+.fixed-background{
+  padding: 10rem 0;
+
+}
+
+
+
+/*============= FOOTER =============*/
+footer{
+  background-color: #383838;
+  padding: 1rem 2rem 3rem;
+
+}
+footer img{
+  height: 3.5rem;
+  margin: 1.5rem auto;
+}
+footer p,footer a{
+  color: white;
+  text-decoration: none;
+}
+ul.social{
+  list-style-type: none;
+  display: flex;
+  max-width: 16rem;
+  margin: auto;
+  padding: 0;
+  
+}
+ul.social li{
+  margin:0 auto;
+
+}
+footer .svg-inline--fa{
+  font-size: 2.3rem;
+
+}
+footer .svg-inline--fa:hover{
+  color: #68a0d2;
+}
+
+
+
+/*============= SOCKET =============*/
+.socket{
+  background-color: #222222;
+  border-top: .1rem solid #4981b3;
+}
+
+
+/*============= MEDIA QUERIES =============*/
+
+/* Devices under 1199px (xl) */
+@media (max-width: 1199.98px) {
+ 
+  
+  .carousel-caption h1{
+    font-size: 2.8rem;
+  }
+  .carousel-caption h3{
+    font-size: 1.8rem;
+    
+  }
+  .sect{
+    flex-direction: column-reverse;
+  }
+  .text-big{
+    text-align: center;
+  }
+  .text-small{
+    text-align: center;
+  }
+  .btn{
+    text-align: center;
+  }
+
+}
+/* Devices under 768px (md) */
+@media (max-width: 991.98px) {
+  .carousel-caption h1{
+    font-size: 2.5rem;
+  }
+  .carousel-caption h3{
+    font-size: 1.5rem;
+    
+  }
+  .btn-lg{
+    font-size: .95rem;
+  }
+  .sect{
+    flex-direction: column-reverse;
+  }
+  .text-big{
+    text-align: center;
+  }
+  .text-small{
+    text-align: center;
+  }
+  .btn{
+    text-align: center;
+  }
+
+
+}
+
+
+/*============ BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/
+
+/*-- Bootstrap Mobile Gutter Fix --*/
+.row, .container-fluid {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+/*-- Fixed Background Image --*/
+.fixed-background {
+  position: relative;
+  width: 100%;
+  z-index: 1000!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -999 !important;
+}
+.fixed {
+  z-index: -999!important;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* foodmenu and others */
+.containers{
+  width: 80%;
+  margin: 0 auto;
+  padding: 1%;
+}
+.img-responsive{
+  width: 100%;
+}
+.img-curve{
+  border-radius: 15px;
+}
+
+
+.text_white{
+  color: white;
+}
+
+.clearfix{
+  clear: both;
+  float: none;
+}
+
+
+.float-container{
+  position: relative;
+}
+.float-text{
+  position: absolute;
+  bottom: 50px;
+  left: 40%;
+}
+fieldset{
+  border: 1px solid white;
+  margin: 5%;
+  padding: 3%;
+  border-radius: 5px;
+}
+.error{
+  padding: 2%;
+  color: red;
+}
+.success{
+  padding: 2%;
+  color: green;
+}
+.sect{
+  justify-content: space-evenly;
+  max-width: 80%;
+  margin: auto;
+  padding: 16px 0;
+  
+}
+.left{
+  flex-direction: row-reverse;
+  
+}
+.paras{
+  padding: 0 40px;
+
+}
+.text-big{
+  font-size: 41px;
+  font-family: 'Ubuntu', sans-serif;
+}
+.text-small{
+  font-size: 18px;
+  font-family: 'Ubuntu', sans-serif;
+}
+.thumbnail img, #cont img{
+  height: 250px;
+  border: 2px solid black;
+  border-radius: 24px;
+  margin-top: 19px;
+}
+
+
+
+
+
+/* CSS for Food SEarch Section */
+
+.food-search{
+  background-image: url('../images/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+}
+
+
+
+/* CSS for Categories */
+.categories{
+  padding: 4% 0;
+}
+
+.box-3{
+  width: 28%;
+  float: left;
+  margin: 2%;
+}
+
+
+/* CSS for Food Menu */
+.food-menu{
+  background-color: #ececec;
+  padding: 4% 0;
+}
+.food-menu-box{
+  width: 43%;
+  margin: 1%;
+  padding: 2%;
+  float: left;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.food-menu-img{
+  width: 20%;
+  float: left;
+}
+
+.food-menu-desc{
+  width: 70%;
+  float: left;
+  margin-left: 8%;
+}
+
+.food-price{
+  font-size: 1.2rem;
+  margin: 2% 0;
+}
+.food-detail{
+  font-size: 1rem;
+  color: #747d8c;
+}
+
+
+
+/* for Order Section */
+.order{
+  width: 50%;
+  margin: 0 auto;
+}
+.input-responsive{
+  width: 96%;
+  padding: 1%;
+  margin-bottom: 3%;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.order-label{
+  margin-bottom: 1%; 
+  font-weight: bold;
+}
+
+
+
+/* CSS for Mobile Size or Smaller Screen */
+
+@media only screen and (max-width:768px){
+  
+
+  .food-search{
+      padding: 10% 0;
+  }
+
+  .categories{
+      padding: 20% 0;
+  }
+  .box-3{
+      width: 100%;
+      margin: 4% auto;
+  }
+
+  .food-menu{
+      padding: 20% 0;
+  }
+
+  .food-menu-box{
+      width: 90%;
+      padding: 5%;
+      margin-bottom: 5%;
+  }
+  
+  .order{
+      width: 100%;
+  }
+  .sect{
+    flex-direction: column-reverse;
+  }
+  .text-big{
+    text-align: center;
+  }
+  .text-small{
+    text-align: center;
+  }
+  .btn{
+    text-align: center;
+  }
+}
+
+/* for login and registration page */
+.divider-text{
+  position: relative;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.divider-text span{
+  padding: 7px;
+  font-size: 12px;
+  position: relative;
+  z-index: 2;
+}
+.divider-text:after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  top: 55%;
+  left: 0;
+  z-index: 1;
+}
+.btn-facebook{
+  background-color: #405D9D!important;
+  color: #fff!important;
+}
+.btn-gmail{
+  background-color: #ea4335!important;
+  color: #fff!important;
+}
+
+/* cart cssss =====*/
+#bannerImage{
+  padding-top:75px;
+  padding-bottom:50px;
+  margin-bottom: 20px;
+  text-align:center;
+  color:#f8f8f8;
+  background:url(../images/3.jpg);
+  background-size:cover;
+}
+
+#bannerContent{
+  position:relative;
+  padding-top:6%;
+  padding-bottom:6%;
+  margin-top:12%;
+  margin-bottom:12%;
+  background-color:rgba(0,0,0,0.7);
+  max-width:660px;
+}
+
+
+html { 
+  min-height:100%;
+  position:relative;    
+} 
+
+
+@media (min-width:320px){
+  #autoResize{
+      font-size:12px;
+  }
+}
+@media (min-width:481px){
+  #autoResize{
+      font-size:16px;
+  }
+}
+@media (min-width:641px){
+  #autoResize{
+      font-size:18px;
+  }
+}
+@media (min-width:961px){
+  #autoResize{
+      font-size:20px;
+  }
+}
+@media (min-width:1000px){
+  #autoResize{
+      font-size:26px;
+  }
+}
